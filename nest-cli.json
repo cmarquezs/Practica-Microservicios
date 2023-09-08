@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/practice-microservice/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/practice-microservice/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/practice-microservice",
+  "projects": {
+    "practice-microservice": {
+      "type": "application",
+      "root": "apps/practice-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/practice-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/practice-microservice/tsconfig.app.json"
+      }
+    },
+    "configure": {
+      "type": "application",
+      "root": "apps/configure",
+      "entryFile": "main",
+      "sourceRoot": "apps/configure/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/configure/tsconfig.app.json"
+      }
+    },
+    "user": {
+      "type": "application",
+      "root": "apps/user",
+      "entryFile": "main",
+      "sourceRoot": "apps/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user/tsconfig.app.json"
+      }
+    }
+  }
+}
